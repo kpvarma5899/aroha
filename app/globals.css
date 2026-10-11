@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --color-ink: #1c1712;
+  --color-paper: #f3eee4;
+  --color-paper-2: #e7dfd0;
+  --color-moss: #1e4738;
+  --color-moss-2: #16352a;
+  --color-clay: #9a4328;
+  --color-line: #d4cbb8;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+html[lang="te"] {
+  --font-sans: var(--font-telugu), var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-telugu), var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #dce4d8;
+  z-index: 0;
+}
+
+.news-ticker-mask {
+  overflow: hidden;
+}
+
+.news-ticker-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: news-ticker 72s linear infinite;
+}
+
+.news-ticker:hover .news-ticker-track {
+  animation-play-state: paused;
+}
+
+.news-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.4rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  border-right: 1px solid color-mix(in srgb, var(--color-paper) 18%, transparent);
+}
+
+@keyframes news-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-ticker-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .news-ticker-item {
+    white-space: normal;
+  }
+}

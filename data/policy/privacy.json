@@ -1,0 +1,9 @@
+{
+  "hideExactPinCategories": ["crime", "encroachment"],
+  "jitterDegrees": 0.0025,
+  "nearbyRadiusMeters": 80,
+  "nearbyLookbackDays": 90,
+  "clusterReadyCount": 10,
+  "clusterShowCount": 3,
+  "scoreboardThinCount": 50
+}

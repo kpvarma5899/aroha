@@ -1,0 +1,41 @@
+{
+  "timezone": "Asia/Kolkata",
+  "openStatuses": ["open", "assigned", "in_progress", "waiting_on_agency"],
+  "awaitingStatus": "awaiting_confirmation",
+  "terminalStatuses": ["resolved", "closed"],
+  "confirmNudgeAfterDays": 7,
+  "steps": [
+    {
+      "id": "helpline",
+      "afterDays": 0,
+      "roles": ["Helpline"],
+      "channels": ["email"],
+      "label": "Department helpline",
+      "skipIfNoContacts": true
+    },
+    {
+      "id": "zone",
+      "afterDays": 3,
+      "roles": ["Zonal Commissioner"],
+      "channels": ["email", "twitter"],
+      "label": "Zonal commissioner",
+      "skipIfNoContacts": true
+    },
+    {
+      "id": "commissioner",
+      "afterDays": 7,
+      "roles": ["Municipal Commissioner"],
+      "channels": ["email", "twitter"],
+      "label": "Municipal commissioner",
+      "skipIfNoContacts": true
+    },
+    {
+      "id": "mla",
+      "afterDays": 14,
+      "roles": ["MLA", "MP"],
+      "channels": ["email", "twitter"],
+      "label": "MLA and MP",
+      "skipIfNoContacts": true
+    }
+  ]
+}

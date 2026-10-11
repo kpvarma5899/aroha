@@ -1,0 +1,54 @@
+{
+  "agencies": [
+    {
+      "key": "mycure",
+      "label": "MyCURE (civic)",
+      "categories": ["roads", "garbage", "streetlights", "drainage", "parks", "encroachment", "other"],
+      "how": "File the same issue on the MyCURE app (it replaced MyGHMC). Paste the ticket number here so both ledgers match.",
+      "portalUrl": "https://www.ghmc.gov.in/",
+      "sourceUrl": "https://www.ghmc.gov.in/",
+      "sourceLabel": "GHMC: civic complaints are also filed on MyCURE (retrieved 22 Aug 2026)",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "hmwssb",
+      "label": "HMWSSB 155313 / 14420",
+      "categories": ["water", "sewer", "drainage"],
+      "how": "Call 155313 (water) or 14420 (sewerage), or use the board’s published channels, then paste their ticket number.",
+      "portalUrl": "https://www.hyderabadwater.gov.in/",
+      "sourceUrl": "https://www.hyderabadwater.gov.in/",
+      "sourceLabel": "HMWSSB published helplines (retrieved 22 Aug 2026)",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "tgspdcl",
+      "label": "TGSPDCL 1912",
+      "categories": ["electricity"],
+      "how": "Call 1912 or use the TGSPDCL consumer portal, then paste their complaint number.",
+      "portalUrl": "https://tgsouthernpower.org/contact",
+      "sourceUrl": "https://tgsouthernpower.org/contact",
+      "sourceLabel": "TGSPDCL official contact page (retrieved 22 Aug 2026)",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "cpgrams",
+      "label": "CPGRAMS",
+      "categories": [],
+      "how": "If the city ticket is dead, file on CPGRAMS and paste the registration number. Use as escalation, not the first stop.",
+      "portalUrl": "https://pgportal.gov.in/",
+      "sourceUrl": "https://pgportal.gov.in/",
+      "sourceLabel": "Centralised Public Grievance Redress and Monitoring System",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "other",
+      "label": "Other agency ticket",
+      "categories": [],
+      "how": "Any other official acknowledgement number.",
+      "portalUrl": null,
+      "sourceUrl": "",
+      "sourceLabel": "",
+      "verifiedOn": "2026-08-22"
+    }
+  ]
+}

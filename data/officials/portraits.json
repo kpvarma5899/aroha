@@ -1,0 +1,91 @@
+{
+  "generatedOn": "2026-08-22",
+  "note": "Only Wikimedia files whose title matches the sitting person. Helplines and people without a sourced portrait use initials — we do not invent a face.",
+  "portraits": {
+    "mp-hyderabad": {
+      "name": "Asaduddin Owaisi",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Asaduddin%20Owaisi%20(24%20December%202006).jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Asaduddin_Owaisi_(24_December_2006).jpg",
+      "photoSourceLabel": "Wikimedia Commons: Asaduddin Owaisi"
+    },
+    "mla-chandrayangutta": {
+      "name": "Akbaruddin Owaisi",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Akbaruddin_Owaisi_Picture.jpg/400px-Akbaruddin_Owaisi_Picture.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/Akbaruddin_Owaisi",
+      "photoSourceLabel": "Wikipedia: Akbaruddin Owaisi"
+    },
+    "mp-secunderabad": {
+      "name": "G. Kishan Reddy",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/G.%20Kishan%20Reddy.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:G._Kishan_Reddy.jpg",
+      "photoSourceLabel": "Wikimedia Commons: G. Kishan Reddy"
+    },
+    "mp-malkajgiri": {
+      "name": "Eatala Rajender",
+      "aka": ["Etela Rajender", "Etala Rajender"],
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Etela%20Rajender.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Etela_Rajender.jpg",
+      "photoSourceLabel": "Wikimedia Commons: Etela Rajender"
+    },
+    "mp-chevella": {
+      "name": "Konda Vishweshwar Reddy",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Konda%20Vishweshwar%20Reddi.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Konda_Vishweshwar_Reddi.jpg",
+      "photoSourceLabel": "Wikimedia Commons: Konda Vishweshwar Reddy"
+    },
+    "mla-goshamahal": {
+      "name": "T. Raja Singh",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Thakur_Raja_Singh_Affidavit_Photo.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/T._Raja_Singh",
+      "photoSourceLabel": "Wikipedia: T. Raja Singh"
+    },
+    "mla-kukatpally": {
+      "name": "Madhavaram Krishna Rao",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/MLA_Madhavaram_Krishna_Rao_conveyed_New_year_Greetings_to_Ex_Minister_%26_MLA_Harish_Rao_on_1_January_2026_%28cropped%29.jpg/400px-MLA_Madhavaram_Krishna_Rao_conveyed_New_year_Greetings_to_Ex_Minister_%26_MLA_Harish_Rao_on_1_January_2026_%28cropped%29.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/Madhavaram_Krishna_Rao",
+      "photoSourceLabel": "Wikipedia: Madhavaram Krishna Rao"
+    },
+    "mla-lbnagar": {
+      "name": "Devireddy Sudheer Reddy",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Devireddy_Sudheer_Reddy.jpg/400px-Devireddy_Sudheer_Reddy.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/Devireddy_Sudheer_Reddy",
+      "photoSourceLabel": "Wikipedia: Devireddy Sudheer Reddy"
+    },
+    "mla-amberpet": {
+      "name": "Kaleru Venkatesh",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Amberpet_MLA_Kaleru_Venkatesh.jpg/400px-Amberpet_MLA_Kaleru_Venkatesh.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/Kaleru_Venkatesh",
+      "photoSourceLabel": "Wikipedia: Kaleru Venkatesh"
+    },
+    "mla-uppal": {
+      "name": "Bandari Lakshma Reddy",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Uppal_MLA_Bandari_Lakshma_Reddy.jpg/400px-Uppal_MLA_Bandari_Lakshma_Reddy.jpg",
+      "photoSource": "https://en.wikipedia.org/wiki/Bandari_Lakshma_Reddy",
+      "photoSourceLabel": "Wikipedia: Bandari Lakshma Reddy"
+    },
+    "mla-nampally": {
+      "name": "Mohammad Majid Hussain",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mohammad%20Majid%20Hussain%20(cropped).jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Mohammad_Majid_Hussain_(cropped).jpg",
+      "photoSourceLabel": "Wikimedia Commons: Mohammad Majid Hussain"
+    },
+    "mla-sanathnagar": {
+      "name": "Talasani Srinivas Yadav",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Talasani%20Srinivas%20Yadav.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Talasani_Srinivas_Yadav.jpg",
+      "photoSourceLabel": "Wikimedia Commons: Talasani Srinivas Yadav"
+    },
+    "mla-secunderabad": {
+      "name": "T. Padma Rao Goud",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/T%20PadmaRao%20Goud.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:T_PadmaRao_Goud.jpg",
+      "photoSourceLabel": "Wikimedia Commons: T. Padma Rao Goud"
+    },
+    "mla-maheshwaram": {
+      "name": "Sabitha Indra Reddy",
+      "photoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Minister%20for%20Home%20and%20Jails%2C%20Andhra%20Pradesh%2C%20Smt.%20Sabitha%20Indra%20Reddy%20addressing%20the%20gathering%20during%20Bharat%20Nirman%20Public%20Information%20Campaign%2C%20at%20Maheswaram%2C%20Rangareddy%20district%2C%20Andhra%20Pradesh%20on%20August%2003%2C%202010.jpg?width=400",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:The_Minister_for_Home_and_Jails,_Andhra_Pradesh,_Smt._Sabitha_Indra_Reddy_addressing_the_gathering_during_Bharat_Nirman_Public_Information_Campaign,_at_Maheswaram,_Rangareddy_district,_Andhra_Pradesh_on_August_03,_2010.jpg",
+      "photoSourceLabel": "Wikimedia Commons: Sabitha Indra Reddy"
+    }
+  }
+}

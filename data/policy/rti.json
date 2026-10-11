@@ -1,0 +1,37 @@
+{
+  "note": "PIO names and personal emails are omitted until published on an official RTI page we have verified. Use the public portals. Do not invent a PIO.",
+  "portals": [
+    {
+      "key": "telangana-rti",
+      "label": "Telangana RTI Online",
+      "url": "https://ts.rtionline.gov.in/",
+      "sourceUrl": "https://ts.rtionline.gov.in/",
+      "sourceLabel": "Telangana RTI online portal",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "ghmc",
+      "label": "GHMC (file RTI naming Greater Hyderabad Municipal Corporation)",
+      "url": "https://www.ghmc.gov.in/",
+      "sourceUrl": "https://www.ghmc.gov.in/",
+      "sourceLabel": "GHMC public site — use as public authority name, not a guessed PIO",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "hmwssb",
+      "label": "HMWSSB",
+      "url": "https://www.hyderabadwater.gov.in/",
+      "sourceUrl": "https://www.hyderabadwater.gov.in/",
+      "sourceLabel": "HMWSSB public site — use as public authority name",
+      "verifiedOn": "2026-08-22"
+    },
+    {
+      "key": "tgspdcl",
+      "label": "TGSPDCL",
+      "url": "https://tgsouthernpower.org/contact",
+      "sourceUrl": "https://tgsouthernpower.org/contact",
+      "sourceLabel": "TGSPDCL contact page — use as public authority name",
+      "verifiedOn": "2026-08-22"
+    }
+  ]
+}

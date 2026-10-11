@@ -1,0 +1,124 @@
+{
+  "categories": [
+    {
+      "id": "roads",
+      "label": "Roads, potholes, footpaths",
+      "labelTe": "రోడ్లు, గుంతలు, కాలిబాటలు",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "garbage",
+      "label": "Garbage and sanitation",
+      "labelTe": "చెత్త, పరిశుభ్రత",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "streetlights",
+      "label": "Street lights",
+      "labelTe": "వీధి దీపాలు",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "drainage",
+      "label": "Drainage and flooding",
+      "labelTe": "మురుగు, వరదలు",
+      "agencies": ["civic-helpline", "hmwssb"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "parks",
+      "label": "Parks, trees, public spaces",
+      "labelTe": "పార్కులు, చెట్లు, బహిరంగ స్థలాలు",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "encroachment",
+      "label": "Encroachment or illegal construction",
+      "labelTe": "ఆక్రమణ లేదా అక్రమ నిర్మాణం",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "water",
+      "label": "Water supply",
+      "labelTe": "నీటి సరఫరా",
+      "agencies": ["hmwssb"],
+      "includeZonal": false,
+      "includeCommissioner": false,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "sewer",
+      "label": "Sewerage",
+      "labelTe": "మురుగునీరు",
+      "agencies": ["hmwssb"],
+      "includeZonal": false,
+      "includeCommissioner": false,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "electricity",
+      "label": "Electricity",
+      "labelTe": "విద్యుత్",
+      "agencies": ["tgspdcl"],
+      "includeZonal": false,
+      "includeCommissioner": false,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "crime",
+      "label": "Crime or public safety",
+      "labelTe": "నేరం లేదా ప్రజా భద్రత",
+      "agencies": ["police"],
+      "includeZonal": false,
+      "includeCommissioner": false,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "traffic",
+      "label": "Traffic",
+      "labelTe": "ట్రాఫిక్",
+      "agencies": ["police"],
+      "includeZonal": false,
+      "includeCommissioner": false,
+      "includeMla": true,
+      "includeMp": true
+    },
+    {
+      "id": "other",
+      "label": "Other civic issue",
+      "labelTe": "ఇతర పౌర సమస్య",
+      "agencies": ["civic-helpline"],
+      "includeZonal": true,
+      "includeCommissioner": true,
+      "includeMla": true,
+      "includeMp": true
+    }
+  ]
+}

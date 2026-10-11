@@ -1,0 +1,266 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  phone     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  cases     Case[]
+}
+
+model IdSequence {
+  name String @id
+  next Int
+}
+
+model Staff {
+  id           String     @id @default(cuid())
+  userCode     String     @unique
+  username     String     @unique
+  email        String?    @unique
+  passwordHash String
+  name         String
+  details      String     @default("")
+  phone        String?
+  role         String
+  active       Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  assigned     Case[]     @relation("Assignee")
+  closed       Case[]     @relation("Closer")
+  notes        CaseNote[]
+}
+
+model OtpChallenge {
+  id         String    @id @default(cuid())
+  phone      String
+  channel    String
+  codeHash   String
+  expiresAt  DateTime
+  attempts   Int       @default(0)
+  consumedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([phone, createdAt])
+}
+
+model Case {
+  id                  String             @id @default(cuid())
+  caseNumber          String             @unique
+  publicToken         String             @unique
+  userId              String?
+  user                User?              @relation(fields: [userId], references: [id], onDelete: SetNull)
+  reporterPhone       String?
+  assignedStaffId     String?
+  assignedStaff       Staff?             @relation("Assignee", fields: [assignedStaffId], references: [id], onDelete: SetNull)
+  lat                 Float
+  lng                 Float
+  displayAddress      String
+  publicAddress       String             @default("")
+  locale              String             @default("en")
+  sensitive           Boolean            @default(false)
+  category            String
+  description         String
+  accountabilityBrief String             @default("{}")
+  status              String             @default("open")
+  officialTicketId    String?
+  twitterPostId       String?
+  twitterPostUrl      String?
+  assemblyName        String?
+  zoneName            String?
+  lokSabhaName        String?
+  municipalCorpName   String?
+  supportCount        Int                @default(1)
+  slaStep             String             @default("")
+  lastEscalationKey   String             @default("")
+  slaDueAt            DateTime?
+  residentConfirm     String             @default("pending")
+  residentConfirmAt   DateTime?
+  awaitingConfirmAt   DateTime?
+  emailSentAt         DateTime?
+  closeSummary        String             @default("")
+  closeOutcome        String             @default("")
+  closedAt            DateTime?
+  closedByStaffId     String?
+  closedBy            Staff?             @relation("Closer", fields: [closedByStaffId], references: [id], onDelete: SetNull)
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+  events              CaseEvent[]
+  contacts            CaseContact[]
+  attachments         Attachment[]
+  notes               CaseNote[]
+  tickets             AgencyTicket[]
+  confirmations       CaseConfirmation[]
+  replies             CaseReply[]
+  outbound            OutboundMessage[]
+
+  @@map("cases")
+  @@index([status])
+  @@index([reporterPhone])
+  @@index([category, status])
+  @@index([assemblyName])
+  @@index([zoneName])
+}
+
+model CaseEvent {
+  id        String   @id @default(cuid())
+  caseId    String
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  status    String
+  note      String?
+  createdAt DateTime @default(now())
+}
+
+model CaseContact {
+  id             String   @id @default(cuid())
+  caseId         String
+  case           Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  name           String
+  role           String
+  agency         String
+  reason         String
+  escalationRank Int
+  phones         String   @default("[]")
+  emails         String   @default("[]")
+  portalUrl      String?
+  sourceUrl      String
+  sourceLabel    String
+  verifiedOn     DateTime
+  stale          Boolean  @default(false)
+  twitterHandle  String?
+  photoUrl       String   @default("")
+  photoSource    String   @default("")
+}
+
+model Attachment {
+  id           String   @id @default(cuid())
+  caseId       String
+  case         Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  storedName   String
+  originalName String
+  mime         String
+  kind         String
+  purpose      String   @default("evidence")
+  createdAt    DateTime @default(now())
+}
+
+model AgencyTicket {
+  id        String   @id @default(cuid())
+  caseId    String
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  agencyKey String
+  ticketId  String
+  portalUrl String?
+  notes     String   @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([caseId, agencyKey])
+  @@index([agencyKey])
+}
+
+model CaseConfirmation {
+  id        String   @id @default(cuid())
+  caseId    String
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  kind      String
+  phone     String?
+  note      String   @default("")
+  createdAt DateTime @default(now())
+
+  @@index([caseId, kind])
+}
+
+model CaseReply {
+  id        String   @id @default(cuid())
+  caseId    String
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  author    String
+  body      String
+  staffId   String?
+  createdAt DateTime @default(now())
+}
+
+model OutboundMessage {
+  id        String    @id @default(cuid())
+  caseId    String?
+  case      Case?     @relation(fields: [caseId], references: [id], onDelete: SetNull)
+  channel   String
+  purpose   String
+  payload   String    @default("{}")
+  status    String
+  error     String?
+  createdAt DateTime  @default(now())
+  sentAt    DateTime?
+
+  @@index([channel, purpose])
+  @@index([status, createdAt])
+}
+
+model JobRun {
+  id        String   @id @default(cuid())
+  name      String
+  dayKey    String
+  ok        Boolean  @default(true)
+  summary   String   @default("")
+  createdAt DateTime @default(now())
+
+  @@unique([name, dayKey])
+}
+
+model CaseNote {
+  id        String   @id @default(cuid())
+  caseId    String
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  staffId   String?
+  staff     Staff?   @relation(fields: [staffId], references: [id], onDelete: SetNull)
+  body      String
+  createdAt DateTime @default(now())
+}
+
+model Jurisdiction {
+  id      String         @id @default(cuid())
+  type    String
+  name    String
+  code    String?
+  geojson String
+  seats   OfficialSeat[]
+
+  @@unique([type, name])
+}
+
+model Official {
+  id          String         @id @default(cuid())
+  name        String
+  role        String
+  agency      String
+  party       String?
+  phones      String         @default("[]")
+  emails      String         @default("[]")
+  portalUrl   String?
+  sourceUrl   String
+  sourceLabel String
+  verifiedOn  DateTime
+  isCurrent   Boolean        @default(true)
+  twitterHandle String?
+  photoUrl      String         @default("")
+  photoSource   String         @default("")
+  seats       OfficialSeat[]
+}
+
+model OfficialSeat {
+  id             String       @id @default(cuid())
+  officialId     String
+  jurisdictionId String
+  official       Official     @relation(fields: [officialId], references: [id], onDelete: Cascade)
+  jurisdiction   Jurisdiction @relation(fields: [jurisdictionId], references: [id], onDelete: Cascade)
+  role           String
+
+  @@index([jurisdictionId])
+}

@@ -1,0 +1,14 @@
+{
+  "onFile": {
+    "emailOffices": true,
+    "twitter": false,
+    "whatsappReporter": true
+  },
+  "digest": {
+    "enabled": true,
+    "hourIst": 18,
+    "email": true,
+    "twitter": false
+  },
+  "skipPublicBroadcastCategories": ["crime", "encroachment"]
+}
